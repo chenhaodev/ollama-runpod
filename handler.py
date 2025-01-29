@@ -33,7 +33,7 @@ async def generate(payload: Dict):
     
     # Generate response using Ollama
     response = ollama.generate(
-        model="deepseek-r1:32b",
+        model="deepseek-r1:1.5b",
         prompt=prompt,
         options={"temperature": 0.7}
     )
