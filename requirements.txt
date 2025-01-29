@@ -1,0 +1,4 @@
+runpod
+ollama
+fastapi
+uvicorn
