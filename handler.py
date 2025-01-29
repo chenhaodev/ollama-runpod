@@ -41,5 +41,14 @@ async def generate(payload: Dict):
     schedule_shutdown()  # Restart the shutdown timer
     return {"response": response["response"]}
 
+
+# Check if model exists, pull if missing
+try:
+    ollama.show("deepseek-r1:1.5b")
+except ollama.ResponseError:
+    print("⏳ Pulling model...")
+    ollama.pull("deepseek-r1:1.5b")
+    print("✅ Model loaded")
+
 # RunPod handler
 handler = ServerlessHandler(app)
