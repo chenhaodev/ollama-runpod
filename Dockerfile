@@ -1,4 +1,4 @@
-FROM runpod/base:0.12.0-cuda11.8.0
+FROM runpod/pytorch:2.2.0-py3.10-cuda12.1.1-devel-ubuntu22.04
 WORKDIR /app
 
 # Install Ollama
